@@ -1,18 +1,22 @@
 class BookingsController < ApplicationController
   def show
-    @bookings = Booking.find(params[:id])
-    @bookings
+    @booking = Booking.find(params[:id])
   end
 
   def new
     @booking = Booking.new
+    @partner = Partner.find(params[:partner_id])
   end
 
   def create
+    @partner = Partner.find(params[:partner_id])
     @booking = Booking.new(booking_params)
-    @booking.list = @bookings
+    @booking.user = current_user
+    @booking.partner = @partner
+    # @booking.all = @bookings
     if @booking.save
-      redirect_to partner_path(@partner)
+
+      redirect_to booking_path(@booking)
     else
       render :new
     end
@@ -27,6 +31,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:id).permit(:description)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end
