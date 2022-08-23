@@ -1,0 +1,14 @@
+
+  <div class="container">
+  <h1>Confirm and pay</h1>
+  </div>
+
+<div class="container card mt-3 p-3">
+<h2> You have choosen: <%= @partner.name %></h2>
+
+<%= simple_form_for [@partner, @booking] do |f| %>
+  <%= f.input :start_date%>
+  <%= f.input :end_date%>
+  <%= f.submit %>
+<% end %>
+</div>
