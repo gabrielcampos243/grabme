@@ -22,7 +22,7 @@
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.6;
+  opacity: 0.8;
   transition: opacity 0.3s ease;
 }
 .btn-ghost:hover {
@@ -32,7 +32,7 @@
   width: 38px
 }
 .avatar {
-  width: 60px;
+  width: 30px;
   border-radius: 50%;
 }
 
@@ -44,4 +44,12 @@
 .nav-item {
   display: flex;
   align-items: center;
+}
+
+.cart {
+  padding-right: 20px;
+}
+
+#navbarSupportedContent img {
+  width: 35px;
 }

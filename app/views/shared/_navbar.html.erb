@@ -1,35 +1,39 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+      <%= image_tag "https://media.istockphoto.com/vectors/line-art-illustration-of-a-man-and-woman-holding-hands-vector-id1129147400?k=20&m=1129147400&s=170667a&w=0&h=yFyf5oDrxQusok6zyrru5cWIRiDbSfDFG-S7B8V4LV8=" %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <div class="center-item">
+      <a class="btn btn-ghost" href="#">Any time</a>
+      <span>|</span>
+      <a class="btn btn-ghost" href="#">Anywhere</a>
+    </div>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <%# if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Log in", new_user_session_path , class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Sign up", new_user_registration_path , class: "nav-link" %>
-          </li>
+        <% if user_signed_in? %>
+          <%= link_to "#", class: "navbar-brand cart" do %>
+            <%= image_tag "https://www.pngall.com/wp-content/uploads/5/Shopping-Cart-PNG-Image-HD.png" %>
+          <% end %>
           <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "https://i.pinimg.com/736x/97/4f/05/974f05ce910b98c192c09d0b55afd01e.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>
               <%= link_to "Another action", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path , class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
-        <%# else %>
+        <% else %>
           <!--li class="nav-item"-->
-            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <%= link_to "Sign up", new_user_registration_path , class: "nav-link" %>
           <!--/li-->
-        <%# end %>
+        <% end %>
       </ul>
     </div>
   </div>
