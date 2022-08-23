@@ -1,6 +1,8 @@
 class BookingsController < ApplicationController
   def show
     @booking = Booking.find(params[:id])
+    @time = @booking.end_date - @booking.start_date
+    @final_price = (@time.to_i * 24) * @booking.partner.price
   end
 
   def new
