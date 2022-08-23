@@ -29,7 +29,7 @@ class PartnersController < ApplicationController
   end
 
   def destroy
-    @partner = Partner.find(params[:id])
+    @partner = Partner.where(:name == current_user.username)
     @partner.destroy
     redirect_to partners_path, status: :see_other
   end

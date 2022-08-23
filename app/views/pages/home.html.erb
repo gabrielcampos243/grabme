@@ -1,1 +1,9 @@
-<h1>Grab Me</h1>
+<div class="container">
+  <h1>Grab Me</h1>
+  <% if user_signed_in? %>
+    <%= link_to "Make money! Offer your service.", new_partner_path %>
+    <%= link_to "Check partners available in our network.", partners_path %>
+  <%else%>
+    <%= link_to "Check partners available in our network.", partners_path %>
+  <%end%>
+</div>
