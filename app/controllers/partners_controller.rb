@@ -13,7 +13,9 @@ class PartnersController < ApplicationController
 
   def create
     @partner = Partner.new(partner_params)
+    @partner.name = current_user.username
     @partner.save
+    redirect_to partners_path
   end
 
   def edit
@@ -34,7 +36,11 @@ class PartnersController < ApplicationController
 
   private
 
+  def partner_description
+    params.require(:partner).permit(:description)
+  end
+
   def partner_params
-    params.require(:partner).permit(:name, :description)
+    params.require(:partner).permit(:description)
   end
 end
