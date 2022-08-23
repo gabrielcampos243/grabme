@@ -34,8 +34,7 @@ class PartnersController < ApplicationController
 
   private
 
-def partner_params
-  params.require(:partner).permit(:name, :description)
-
-
+  def partner_params
+    params.require(:partner).permit(:name, :description)
+  end
 end
