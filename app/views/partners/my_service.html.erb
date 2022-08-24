@@ -4,6 +4,7 @@
 
   <div class="card">
     <h2><%= @partner.name %></h2>
+    <%= cl_image_tag @partner.photo.key, height: 300, width: 400, crop: :fill %>
     <p><%= @partner.description %></p>
     <p><%=@partner.price%>€</p>
     <%= link_to "Edit", edit_partner_path(@partner) %>
