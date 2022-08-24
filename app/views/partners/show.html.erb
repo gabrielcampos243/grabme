@@ -1,9 +1,9 @@
-<div class="container d-flex flex-column align-items-center">
-  <%= @partner.name.capitalize %>
+<div class="container d-flex flex-column align-items-center mt-4">
+  <h2><%= @partner.name.capitalize %></h2>
 
   <img src="https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc=" alt="" class="user-img" width="300px">
 
   <%= @partner.description.capitalize %>
 
-  <%= link_to "Grab me",  new_partner_booking_path(params[:id])%>
+  <div class="button-1 mt-2"><%= link_to "Grab me",  new_partner_booking_path(params[:id])%></div>
 </div>

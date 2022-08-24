@@ -11,7 +11,14 @@
 
   </div>
   <% else %>
-    <h1>No Service posted! :(</h1>
-    <%= link_to "Create one now !", new_partner_path %>
+    <h1>No Service posted!</h1>
+    <div class="button-1">
+      <%= link_to "Create one now !", new_partner_path %>
+    </div>
+    <div class="container d-flex justify-content-center align-items-start">
+      <div class="pepe">
+        <%= image_tag "pepe_sad" %>
+      </div>
+    </div>
   <% end %>
 </div>
