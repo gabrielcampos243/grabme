@@ -6,7 +6,7 @@
             <%= cl_image_tag partner.photo.key, height: 300, width: 400, crop: :fill %>
           <div class="card-product-infos">
             <%if partner.name == current_user.username%>
-              <h2> <%= partner.name %></h2>
+              <h2><%= partner.name %></h2>
               <p>Price per hour: <%= partner.price %>€</p>
               <p> <strong><%= partner.description %></strong></p>
             <% else %>

@@ -12,7 +12,7 @@ Booking.destroy_all
 Partner.destroy_all
 User.destroy_all
 puts "creating partners..."
-file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661334579/cld-sample.jpg")
+file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661354612/Grab_me/m-pic_fpobzs.jpg")
 martim = User.create(email: "martim@gmail.com", username: "Martim", password: "123123")
 p1 = Partner.new(name: martim.username, description: "charming, strong", price: 1, user_id: martim.id)
 p1.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
