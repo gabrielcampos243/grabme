@@ -40,7 +40,7 @@ class PartnersController < ApplicationController
   end
 
   def my_service
-    @partner =  @partner = Partner.find_by(:name == current_user.username)
+   @partner = Partner.find_by(user_id: current_user.id)
   end
 
   private
