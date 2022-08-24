@@ -16,7 +16,7 @@ class PartnersController < ApplicationController
     @partner.name = current_user.username
     @partner.user_id = current_user.id
     if @partner.save
-      redirect_to partners_path
+      redirect_to my_service_partners_path
    else
     render :message
    end
@@ -30,13 +30,13 @@ class PartnersController < ApplicationController
   def update
     @partner = Partner.find(params[:id])
     @partner = Partner.update(partner_params)
-    redirect_to partner_path(@restaurant)
+    redirect_to  my_service_partners_path
   end
 
   def destroy
-    @partner = Partner.where(:name == current_user.username)
+    @partner = Partner.find_by(user_id: current_user.id)
     @partner.destroy
-    redirect_to partners_path, status: :see_other
+    redirect_to root_path, status: :see_other
   end
 
   def my_service
