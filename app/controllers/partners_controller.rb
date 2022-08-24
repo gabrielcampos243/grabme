@@ -14,9 +14,14 @@ class PartnersController < ApplicationController
   def create
     @partner = Partner.new(partner_params)
     @partner.name = current_user.username
-    @partner.save
-    redirect_to partners_path
+    @partner.user_id = current_user.id
+    if @partner.save
+      redirect_to partners_path
+   else
+    render :message
+   end
   end
+
 
   def edit
     @partner= Partner.find(params[:id])
@@ -32,6 +37,10 @@ class PartnersController < ApplicationController
     @partner = Partner.where(:name == current_user.username)
     @partner.destroy
     redirect_to partners_path, status: :see_other
+  end
+
+  def my_service
+    @partner =  @partner = Partner.find_by(:name == current_user.username)
   end
 
   private
