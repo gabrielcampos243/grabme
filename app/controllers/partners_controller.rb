@@ -29,7 +29,7 @@ class PartnersController < ApplicationController
 
   def update
     @partner = Partner.find(params[:id])
-    @partner = Partner.update(partner_params)
+    @partner.update(partner_params)
     redirect_to  my_service_partners_path
   end
 
