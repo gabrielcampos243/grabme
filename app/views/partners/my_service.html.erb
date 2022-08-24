@@ -1,8 +1,17 @@
 <div class="container">
+<%if @partner != nil %>
   <h1> My service </h1>
 
   <div class="card">
     <h2><%= @partner.name %></h2>
     <p><%= @partner.description %></p>
+    <p><%=@partner.price%>€</p>
+    <%= link_to "Edit", edit_partner_path(@partner) %>
+    <%= link_to "Delete", partner_path(@partner), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
   </div>
+  <% else %>
+    <h1>No Service posted! :(</h1>
+    <%= link_to "Create one now !", new_partner_path %>
+  <% end %>
 </div>
