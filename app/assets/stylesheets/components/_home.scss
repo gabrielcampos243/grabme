@@ -1,0 +1,25 @@
+.button-1 {
+  background-color: rgb(0, 188, 0);
+  color: white;
+  border-radius: 5px;
+  width: 140px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-weight: 600;
+}
+
+.button-1 a {
+  text-decoration: none;
+  color: white;
+}
+
+.button-1:hover {
+  background-color: rgb(33, 200, 33);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.button-1 a:hover {
+  color: rgb(0, 0, 0);
+  transition: 0.3s;
+}

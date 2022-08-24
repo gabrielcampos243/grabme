@@ -1,9 +1,11 @@
 <div class="container">
   <h1>Grab Me</h1>
-  <% if user_signed_in? %>
-    <%= link_to "Make money! Offer your service.", new_partner_path %>
-    <%= link_to "Check partners available in our network.", partners_path %>
-  <%else%>
-    <%= link_to "Check partners available in our network.", partners_path %>
-  <%end%>
+  <div class="button-container d-flex flex-nowrap">
+    <% if user_signed_in? %>
+      <div class="button-1 me-2"><%= link_to "Make money! Offer your service.", new_partner_path %></div>
+      <div class="button-1"><%= link_to "Check partners available in our network.", partners_path %></div>
+    <%else%>
+      <div class="button-1"><%= link_to "Check partners available in our network.", partners_path %></div>
+    <%end%>
+  </div>
 </div>
