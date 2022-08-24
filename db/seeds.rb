@@ -33,14 +33,14 @@ p3 = Partner.create(name: luis.username, description: "charming, strong", price:
 p3.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 p3.save
 
-file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661334579/cld-sample.jpg")
+file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661353638/Grab_me/francisco_utn5ci.jpg")
 francisco = User.create(email: "francisco@gmail.com", username: "Francisco", password: "123123")
-p4 = Partner.create(name: francisco.username, description: "charming, strong", price: 1, user_id: francisco.id)
+p4 = Partner.create(name: francisco.username, description: "I will act like im your cool date for the day!", price: 10, user_id: francisco.id)
 p4.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 p4.save
 
 file = URI.open("https://res.cloudinary.com/dluisdviu/image/upload/v1661334579/cld-sample.jpg")
-joao = User.create(email: "joao@gmail.com", username: "joao", password: "123123")
+joao = User.create(email: "joao@gmail.com", username: "Joao", password: "123123")
 p4 = Partner.create(name: joao.username, description: "charming, strong", price: 1, user_id: joao.id)
 p4.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 p4.save
