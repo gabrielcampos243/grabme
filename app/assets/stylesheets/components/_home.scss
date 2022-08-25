@@ -15,7 +15,7 @@
 }
 
 .button-1:hover {
-  background-color: rgb(33, 200, 33);
+  background-color: rgba(180, 3, 20, 0.56);
   font-weight: 600;
   transition: 0.3s;
 }
@@ -32,14 +32,22 @@
 .banner {
 
   background-image: url("https://gianluigitorzi.files.wordpress.com/2021/02/crowded-street-yellow.2e16d0ba.fill-1524x683-1.jpg");
-  background-size:100%;
+  background-size:cover;
+  background-position: center;
   background-repeat:no-repeat;
-  min-height:800px;
-  height: 100%;
+  min-height:500px;
+  max-height: 900px;
 }
 
 
 .banner > h1 {
   color: rgba(255, 255, 255, 0.848);
   text-align: center;
+
+
+}
+
+.banner > .button-1 {
+  text-align: center;
+  margin-right: -50%;
 }
