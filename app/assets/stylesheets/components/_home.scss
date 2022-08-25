@@ -1,6 +1,6 @@
 .button-1 {
   background-color: rgb(0, 188, 0);
-  color: white;
+  color: rgba(255, 255, 255, 0.86);
   border-radius: 5px;
   height: fit-content;
   padding: 4px 14px;
@@ -11,25 +11,45 @@
 
 .button-1 a {
   text-decoration: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.799);
 }
 
 .button-1:hover {
-  background-color: rgb(33, 200, 33);
+  background-color: rgba(180, 3, 20, 0.56);
   font-weight: 600;
   transition: 0.3s;
 }
 
 .button-1 a:hover {
-  color: rgb(0, 0, 0);
+  color: rgb(124, 5, 5);
   transition: 0.3s;
 }
 
-.btn a{
-  text-decoration: none;
-  color: white;
-  font-weight: bolder;
+.container img {
+  width: 100%;
+}
+
+.banner {
+
+  background-image: url("https://gianluigitorzi.files.wordpress.com/2021/02/crowded-street-yellow.2e16d0ba.fill-1524x683-1.jpg");
+  background-size:cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  min-height:500px;
+  max-height: 900px;
 }
 
 
+.container > h1 {
+  color: rgba(255, 255, 255, 0.848);
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 60px;
 
+
+}
+
+.container > .button-1 {
+  text-align: center;
+  background-color: black;
+}

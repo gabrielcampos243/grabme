@@ -1,4 +1,9 @@
-  <h1>Dashboard</h1>
+<div class="text-center mt-4">
+  <div class="top-box d-flex justify-content-center">
+    <h1>Dashboard</h1>
+    <%= image_tag "pie-chart.png", class:"pie-chart" %>
+  </div>
+</div>
 
 <div class="container d-flex flex-column bd-highlight">
   <%if user_signed_in?%>
@@ -12,7 +17,7 @@
             <p> Price: <%=@my_service.price %>€</p>
           </div>
 
-          <div class="my-jobs">
+<div class="my-jobs">
             <div class="my-jobs-info">
             <h2>My Jobs</h2>
               <% @my_jobs.each do |job| %>
