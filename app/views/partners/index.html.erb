@@ -1,16 +1,37 @@
 <div class="container d-flex">
   <div class="row justify-content-center">
-    <% @partners.each do |partner| %>
-      <div class="col-lg-3 m-3">
-        <div class="card-product rounded-4">
-          <%= cl_image_tag partner.photo.key, height: 300, width: 400, crop: :fill %>
-          <div class="card-product-infos">
-            <h2><%= link_to partner.name, partner_path(partner[:id]) %></h2>
-            <p>Price per hour: <%= partner.price %>€</p>
-            <p><strong><%= partner.description %></strong></p>
+    <% if user_signed_in?  %>
+      <% @partners.each do |partner| %>
+        <div class="col-lg-3 m-3">
+          <div class="card-product rounded-4">
+              <%= cl_image_tag partner.photo.key, height: 300, width: 400, crop: :fill %>
+            <div class="card-product-infos">
+              <%if partner.name == current_user.username%>
+                <h2><%= partner.name %></h2>
+                <p>Price per hour: <%= partner.price %>€</p>
+                <p> <strong><%= partner.description %></strong></p>
+              <% else %>
+                <h2><%= link_to partner.name, partner_path(partner[:id]) %></h2>
+                <p>Price per hour: <%= partner.price %>€</p>
+                <p><strong><%= partner.description %></strong></p>
+                <% end %>
+            </div>
           </div>
         </div>
-      </div>
+      <% end %>
+    <% else %>
+      <% @partners.each do |partner| %>
+        <div class="col-lg-3 m-3">
+          <div class="card-product rounded-4">
+            <%= cl_image_tag partner.photo.key, height: 300, width: 400, crop: :fill %>
+            <div class="card-product-infos">
+              <h2><%= link_to partner.name, partner_path(partner[:id]) %></h2>
+              <p>Price per hour: <%= partner.price %>€</p>
+              <p><strong><%= partner.description %></strong></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
