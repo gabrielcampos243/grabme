@@ -1,4 +1,4 @@
-<div class="container mt-1">
+<div class="banner">
   <% if user_signed_in? %>
     <h1>Welcome <%= current_user.username %>!</h1>
     <div class="container d-flex justify-content-between">
@@ -7,11 +7,10 @@
         <div class="button-1 me-2"><%= link_to "Check partners available in our network.", partners_path %></div>
       </div>
     <%else%>
-      <h1>Welcome to Grab me</h1>
+      <h1>WELCOME TO GRAB ME</h1>
       <div class="container d-flex justify-content-between">
         <div class="button-1"><%= link_to "Check partners available in our network.", partners_path %></div>
       <%end%>
-      <img src="https://wallpaperaccess.com/full/4054902.jpg" alt="" class="user-img" width="500px">
     </div>
     </div>
   </div>
