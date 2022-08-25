@@ -18,7 +18,7 @@
               <%= image_tag "https://i.pinimg.com/736x/97/4f/05/974f05ce910b98c192c09d0b55afd01e.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/">My Profile</a>
+              <a class="dropdown-item" href="/dashboard">My Profile</a>
               <%= link_to "Log out", destroy_user_session_path , class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
