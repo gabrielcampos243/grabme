@@ -19,7 +19,7 @@ class PartnersController < ApplicationController
       redirect_to my_service_partners_path
    else
     render :message
-   end
+    end
   end
 
 
