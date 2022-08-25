@@ -1,10 +1,53 @@
-.dashboard-cards{
+.dashboard-cards {
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   border-radius: 5px;
 }
 
-.dashboard-cards:hover{
-  transition: 0.5s;
-  background-color: rgb(255, 223, 223);
+.dashboard-cards-2 {
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 5px;
+  height: 250px;
+}
+
+.right-box {
+  margin-right: 25%;
+}
+
+.cancel-btn {
+  text-decoration: none;
+  background-color: transparent;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: rgb(128, 126, 126)
+}
+
+a.cancel-btn {
+  font-size: 800;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.dashboard-h2 {
+  font-weight: bold;
+}
+
+.pie-chart {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+  opacity: 0.9;
 }
