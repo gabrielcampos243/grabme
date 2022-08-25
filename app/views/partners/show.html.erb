@@ -1,9 +1,7 @@
 
 <div class="container d-flex flex-column align-items-center mt-4">
   <h2><%= @partner.name.capitalize %></h2>
-
-
-
+  
   <%= cl_image_tag @partner.photo.key, height: 300, width: 400, crop: :fill %>
 
   <%= @partner.description.capitalize %>

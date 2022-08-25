@@ -25,10 +25,6 @@
   transition: 0.3s;
 }
 
-.container img {
-  width: 100%;
-}
-
 .banner {
 
   background-image: url("https://gianluigitorzi.files.wordpress.com/2021/02/crowded-street-yellow.2e16d0ba.fill-1524x683-1.jpg");
@@ -37,6 +33,7 @@
   background-repeat:no-repeat;
   min-height:500px;
   max-height: 900px;
+  object-fit: cover;
 }
 
 
