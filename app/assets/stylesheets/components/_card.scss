@@ -1,6 +1,6 @@
 .card-product {
   overflow: hidden;
-  height: 120px;
+  height: 200px;
   background: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   display: flex;
@@ -38,4 +38,8 @@
 
 .card-product-infos a:hover {
   color: rgb(124, 233, 29)
+}
+.card{
+  background-color: rgba(189, 201, 197, 0.078);
+  border-radius: 5px;
 }
