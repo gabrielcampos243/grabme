@@ -37,16 +37,19 @@
 }
 
 
-.container > h1 {
+.hm-center > h1 {
   color: rgba(255, 255, 255, 0.848);
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
   font-size: 60px;
 
+  .hm-center> h2 {
+    font-family: 'Courier New', Courier, monospace;
+  }
 
 }
 
-.container > .button-1 {
+.hm-center > .button-1 {
   text-align: center;
   background-color: black;
 }
