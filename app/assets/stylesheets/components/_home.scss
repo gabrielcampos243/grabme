@@ -21,7 +21,7 @@
 }
 
 .button-1 a:hover {
-  color: rgb(0, 0, 0);
+  color: rgb(124, 5, 5);
   transition: 0.3s;
 }
 
@@ -40,14 +40,16 @@
 }
 
 
-.banner > h1 {
+.container > h1 {
   color: rgba(255, 255, 255, 0.848);
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 60px;
 
 
 }
 
-.banner > .button-1 {
+.container > .button-1 {
   text-align: center;
-  margin-right: -50%;
+  background-color: black;
 }
