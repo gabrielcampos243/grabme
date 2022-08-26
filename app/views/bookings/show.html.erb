@@ -1,16 +1,20 @@
-<h1>Congratulations with your pick! Have a good time ❤️</h1>
+<div class="container mt-5 booked">
+  <h1>Congratulations with your pick! Have a good time ❤️</h1>
 
-<div class="container d-flex align-items-center">
-  <div class="container d-flex justify-content-center align-items-start mt-4 mb-4">
-    <div class="card card-tag">
-      <h2><%= @booking.partner.name %></h2>
-      <p>Check out price: <%= @final_price %>€</p>
+  <div class="container d-flex align-items-center">
+    <div class="container d-flex justify-content-center align-items-start mt-4 mb-4">
+      <%= image_tag "fireworks.gif", class:"fireworks"%>
+      <div class="card card-tag">
+        <h2><%= @booking.partner.name %></h2>
+        <p>Check out price: <%= @final_price %>€</p>
+      </div>
     </div>
-  </div>
+     <%= image_tag "fireworks.gif", class:"fireworks"%>
 
-  <div class="container d-flex justify-content-center align-items-start">
-    <div class="pepe-dance">
-      <%= image_tag "pepe-danca.gif" %>
+    <div class="container d-flex justify-content-center align-items-start">
+      <div class="pepe-dance">
+        <%= image_tag "pepe-danca.gif" %>
+      </div>
     </div>
   </div>
 </div>
