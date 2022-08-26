@@ -16,7 +16,7 @@ class PartnersController < ApplicationController
     @partner.name = current_user.username
     @partner.user_id = current_user.id
     if @partner.save
-      redirect_to my_service_partners_path
+      redirect_to dashboard_path
    else
     render :message
     end
