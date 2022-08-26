@@ -1,5 +1,5 @@
 .button-1 {
-  background-color: rgb(0, 188, 0);
+  background-color: rgb(0, 0, 0);
   color: rgba(255, 255, 255, 0.86);
   border-radius: 5px;
   height: fit-content;
@@ -7,6 +7,8 @@
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   font-weight: 600;
+  width: fit-content;
+  transition: all 0.5s ease;
 }
 
 .button-1 a {
@@ -15,9 +17,12 @@
 }
 
 .button-1:hover {
-  background-color: rgba(180, 3, 20, 0.56);
+  //background-color: rgba(180, 3, 20, 0.56);
   font-weight: 600;
   transition: 0.3s;
+  cursor: pointer;
+  transform: scale(1.1);
+  filter: brightness(120%);
 }
 
 .button-1 a:hover {
@@ -27,29 +32,106 @@
 
 .banner {
 
-  background-image: url("https://gianluigitorzi.files.wordpress.com/2021/02/crowded-street-yellow.2e16d0ba.fill-1524x683-1.jpg");
+  background-image: url("https://www.thecontentcoach.com.au/wp-content/uploads/2020/04/connection.jpg");
   background-size:cover;
   background-position: center;
   background-repeat:no-repeat;
   min-height:500px;
   max-height: 900px;
   object-fit: cover;
-}
-
-
-.hm-center > h1 {
-  color: rgba(255, 255, 255, 0.848);
-  text-align: center;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 60px;
-
-  .hm-center> h2 {
-    font-family: 'Courier New', Courier, monospace;
-  }
-
+  opacity: 0.7;
+  image-resolution: from-image 300dpi;
 }
 
 .hm-center > .button-1 {
   text-align: center;
   background-color: black;
 }
+
+.container-a span {
+  text-transform: uppercase;
+  display: block;
+}
+
+.text1 {
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(0, 0, 0);
+  font-size: 60px;
+  font-weight: 900;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  animation-name: text1;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+
+}
+
+.text2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+  font-weight: 900;
+  color: black;
+  text-shadow: 1px 1px 1px rgba(210, 210, 210, 0.8);
+  animation-name: text2;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+}
+
+@keyframes text1 {
+  0% {
+    color: rgba(0, 0, 0, 0.803);
+    margin-bottom: -40px;
+    opacity: 0.1;
+  }
+  30% {
+    letter-spacing: 20px;
+    margin-bottom: -40px;
+  }
+  85% {
+    letter-spacing: 8px;
+    margin-bottom: -40px;
+  }
+  100% {
+    margin-bottom: 20px;
+  }
+}
+
+@keyframes text2 {
+  0% {
+    visibility: hidden;
+  }
+  30% {
+    visibility: hidden;
+  }
+  85% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+
+
+
+// .hm-center > h1 {
+//   color: rgba(255, 255, 255, 0.848);
+//   text-align: center;
+//   font-family: 'Courier New', Courier, monospace;
+//   font-size: 60px;
+
+//   .hm-center> h2 {
+//     font-family: 'Courier New', Courier, monospace;
+//   }
+
+// }
+
+
+// .h3-text {
+//   color:white;
+//   font-family: 'Open Sans', sans-serif;
+//   font-weight: 700;
+// }
