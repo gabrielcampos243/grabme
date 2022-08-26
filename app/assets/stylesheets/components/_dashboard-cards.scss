@@ -2,6 +2,7 @@
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   border-radius: 5px;
+  width: fit-content;
 }
 
 .dashboard-cards-2 {
@@ -60,4 +61,16 @@ a.cancel-btn {
 
 .my-jobs-info > h2 {
   font-weight: 700;
+}
+
+.profile-imgg {
+  border: 2px solid black;
+}
+
+.booking-picc {
+  border: 2px solid black;
+}
+
+.booking-cards {
+  border: 2px solid black;
 }
