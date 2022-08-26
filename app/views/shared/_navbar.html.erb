@@ -19,7 +19,6 @@
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <p style="text-align:center; border-bottom: 1px solid grey;"><%=current_user.username %></p>
-
               <a class="dropdown-item" href="/dashboard">My Profile</a>
               <%= link_to "Log out", destroy_user_session_path , class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>

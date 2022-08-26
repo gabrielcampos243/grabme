@@ -34,8 +34,10 @@
   width: 38px
 }
 .avatar {
-  width: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .search-button img {
@@ -52,12 +54,8 @@
   padding-right: 20px;
 }
 
-#navbarSupportedContent img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-}
-
 .dropdown-menu {
   border-radius: 16px;
+  border:2px solid black;
 }
+

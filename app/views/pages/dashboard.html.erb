@@ -1,7 +1,7 @@
 <div class="text-center mt-4">
   <div class="top-box d-flex justify-content-center">
     <h1>My Profile</h1>
-    <%= image_tag "pie-chart.png", class:"pie-chart" %>
+    <%= image_tag "profile-pic.png", class:"pie-chart" %>
   </div>
 </div>
 
@@ -11,13 +11,13 @@
       <div class="my-dashboard-card m-3 dashboard-cards p-3">
         <div class="position-of-service-jobs d-flex justify-content-around">
           <div class="my-service">
-            <h2> My Service</h2>
+            <h2>My Service</h2>
             <%= cl_image_tag @my_service.photo.key, height: 300, width: 400, crop: :fill %>
-            <p> Description: <%= @my_service.description %></p>
-            <p> Price: <%=@my_service.price %>€</p>
+            <p class="mt-4"><strong>Description:</strong> <%= @my_service.description %></p>
+            <p><strong>Price:</strong> <%=@my_service.price %>€</p>
           </div>
 
-<div class="my-jobs">
+          <div class="my-jobs">
             <div class="my-jobs-info">
             <h2>My Clients</h2>
               <% @my_jobs.each do |job| %>
@@ -31,53 +31,54 @@
         </div>
       </div>
 
-        <div class="my-service-buttons">
-          <div class="button-1 m-2">
-            <%= link_to "Edit", edit_partner_path(@my_service) %>
-          </div>
-          <div class="button-1 m-2">
-            <%= link_to "Delete", partner_path(@my_service), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-          </div>
+      <div class="my-service-buttons">
+        <div class="button-1 m-2">
+          <%= link_to "Edit", edit_partner_path(@my_service) %>
         </div>
+        <div class="button-1 m-2">
+          <%= link_to "Delete", partner_path(@my_service), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
         </div>
-      <% else %>
-        <div class="btn btn-success">
-          <%= link_to "List yourself as a partner!", new_partner_path %>
-        </div>
-      <% end %>
+      </div>
+      </div>
+    <% else %>
+      <div class="btn btn-success">
+        <%= link_to "List yourself as a partner!", new_partner_path %>
+      </div>
+    <% end %>
 
-
-
-    <div class="my-bookings m-3 dashboard-cards p-3">
-      <h2>My bookings</h2>
-      <%if @my_bookings.count >= 1%>
-
-        <% @my_bookings.each do |booking| %>
-          <div class="p-4 mt-3">
-            <h1><%= booking.partner.name %></h1>
-            <%= cl_image_tag booking.partner.photo.key, height: 300, width: 400, crop: :fill %>
-            <p> <strong>From:</strong> <%= booking.start_date %> <strong>To:</strong> <%= booking.end_date %></p>
-            <p> <strong>Cost:</strong> <%=((booking.end_date - booking.start_date)* 24) * booking.partner.price %> € </p>
-            <div class="d-flex align-items-center justify-content-center">
-              <%= link_to "Cancel" , booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-              <img src="https://cdn.betterttv.net/emote/5baaf017ed3de76aa4212261/3x" alt="sad" width="40px">
-            </div>
-          </div>
-        <% end %>
-
-      <% else %>
+    <div class="sec-box mt-4">
+      <div class="top-box d-flex justify-content-center">
+        <h1 class="text-center">My bookings</h1>
+        <%= image_tag "booking-confirmation.png", class:"pie-chart" %>
+      </div>
+      <div class="my-bookings m-3 dashboard-cards-2 ps-3 pe-3 pb-3 pt-2">
+        <%if @my_bookings.count >= 1%>
+          <% @my_bookings.each do |booking| %>
+            <h2><%= booking.partner.name %></h2>
+              <div class="mt- d-flex justify-content-between">
+                <%= cl_image_tag booking.partner.photo.key, height: 150, width: 150, crop: :fill %>
+                <div class="right-box">
+                  <p> <strong>From:</strong> <%= booking.start_date %> <strong>To:</strong> <%= booking.end_date %></p>
+                  <p> <strong>Cost:</strong> <%=((booking.end_date - booking.start_date)* 24) * booking.partner.price %> € </p>
+                  <div class="cancel-btn d-flex align-items-baseline">
+                    <img src="https://cdn.betterttv.net/emote/5baaf017ed3de76aa4212261/3x" alt="sad" width="40px">
+                    <%= link_to "Cancel" , booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+                  </div>
+                </div>
+              </div>
+              <hr>
+          <% end %>
+        <% else %>
           <h2>I'm sorry but no bookings were found...</h2>
           <div class="container d-flex justify-content-center align-items-start">
             <div class="pepe">
               <%= image_tag "pepe_sad" %>
             </div>
           </div>
-      <% end %>
-
+        <% end %>
       </div>
-
-    <% else %>
+      <% else %>
       <h1>User not loged in...</h1>
-
- <% end %>
-</div>
+      <% end %>
+    </div>
+  </div>
