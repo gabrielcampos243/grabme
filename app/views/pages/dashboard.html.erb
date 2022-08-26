@@ -25,24 +25,26 @@
             </div>
           </div>
 
-          <div class="my-jobs">
-            <div class="my-jobs-info">
-            <h2>My Clients</h2>
-            <%if @my_jobs != []%>
-              <% @my_jobs.each do |job| %>
-                <div class="card p-4 m-2">
-                  <p> <strong><%=job.user.username %></strong> Booked you!</p>
-                  <p> <strong>From:</strong> <%=job.start_date %> <strong>To:</strong> <%= job.end_date %> </p>
-                  <p> + <%=(((job.end_date - job.start_date).to_i*24)* job.partner.price )%> € </p>
-                </div>
-              <% end %>
-            <% else %>
-            <div class="card p-4 m-2">
-                  <p>No Clients in queue!</p>
-                </div>
+          <%if current_user.partner != nil%>
+            <div class="my-jobs">
+              <div class="my-jobs-info">
+              <h2>My Clients</h2>
+                <% @my_jobs.each do |job| %>
+                  <div class="card p-4 m-2">
+                    <p> <strong><%=job.user.username %></strong> Booked you!</p>
+                    <p> <strong>From:</strong> <%=job.start_date %> <strong>To:</strong> <%= job.end_date %> </p>
+                    <p> + <%=(((job.end_date - job.start_date).to_i*24)* job.partner.price )%> € </p>
+                  </div>
+                <% end %>
+            </div>
 
-            <% end %>
-          </div>
+          <% elsif current_user.partner == nil%>
+            <div class="my-jobs">
+              <div class="my-jobs-info">
+                <h2>My Clients</h2>
+                <p>No clients</p>
+            </div>
+          <% end %>
         </div>
       </div>
 
