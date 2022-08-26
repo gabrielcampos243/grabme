@@ -8,7 +8,7 @@
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   border-radius: 5px;
-  height: 250px;
+  height: max-content;
 }
 
 .right-box {
@@ -18,12 +18,16 @@
 .cancel-btn {
   text-decoration: none;
   background-color: transparent;
-  margin-top: 20px;
-  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.cancel-btn a {
+  margin-left: 15px;
 }
 
 a {
   color: black;
+  text-decoration: none;
 }
 
 a:hover {
@@ -35,8 +39,6 @@ a.cancel-btn {
 }
 
 .profile-img {
-  width: 150px;
-  height: 150px;
   object-fit: cover;
 }
 
@@ -45,9 +47,17 @@ a.cancel-btn {
 }
 
 .pie-chart {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   margin-left: 10px;
   margin-top: 10px;
   opacity: 0.9;
+}
+
+.my-service > h2 {
+  font-weight: 700;
+}
+
+.my-jobs-info > h2 {
+  font-weight: 700;
 }
