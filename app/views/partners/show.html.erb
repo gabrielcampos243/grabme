@@ -1,10 +1,10 @@
 
-<div class="container d-flex flex-column align-items-center mt-4">
-  <h2><%= @partner.name.capitalize %></h2>
-  
-  <%= cl_image_tag @partner.photo.key, height: 300, width: 400, crop: :fill %>
+<div class="container d-flex flex-column align-items-center mt-4 card-card-box">
+  <h2 class="h2-texts mt-1"><%= @partner.name.capitalize %></h2>
+
+  <%= cl_image_tag @partner.photo.key, height: 300, width: 400, crop: :fill, class:"partner-pic"%>
 
   <%= @partner.description.capitalize %>
 
-  <div class="button-1 mt-2"><%= link_to "Grab me",  new_partner_booking_path(params[:id])%></div>
+  <div class="button-1 mt-1 mb-2"><%= link_to "Grab me",  new_partner_booking_path(params[:id])%></div>
 </div>

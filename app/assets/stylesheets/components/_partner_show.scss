@@ -1,5 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
-h2 p {
-  font-family: 'Nunito', sans-serif;
+.h2-texts {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700x ;
+}
+
+.card-card-box {
+  background-color: antiquewhite;
+  border: 2px solid black;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+.partner-pic {
+  border-radius: 5px;
 }
